@@ -83,3 +83,5 @@ print("\n=== Task 10 ===")
 print("Task 10 answers:")
 print("Fuel needed:", fuel_needed, "liters")
 print("Refills needed:", int(refills_needed))
+
+print("test")
