@@ -1,4 +1,3 @@
-# Car data and search criteria
 car_data = {
   'Mercedes': ('silver', 2019, 1.8, 'sedan', 50000),
   'Audi': ('black', 2020, 2.0, 'sedan', 55000),
@@ -43,20 +42,16 @@ car_data = {
 
 search_criteria = (2017, 1.6, 36000)
 
-# Filtering and sorting
 filtered_cars = []
 for car, data in car_data.items():
     year, engine_volume, price = data[1], data[2], data[4]
     if year >= search_criteria[0] and engine_volume >= search_criteria[1] and price <= search_criteria[2]:
         filtered_cars.append((car, data))
 
-# Sorting by price (ascending)
 filtered_cars.sort(key=lambda x: x[1][4])
 
-# Limiting to the first 5 results
 filtered_cars = filtered_cars[:5]
 
-# Printing results
 for car, data in filtered_cars:
     print(f"{car}: {data}")
 
